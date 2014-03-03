@@ -1,20 +1,8 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Wraith</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
-    </head>
-    <body>
     <% @files.each do |configs| %>
-      <%  wraith = YAML::load(File.open(configs)) %>
-      <%  dir = wraith['directory'] unless wraith['directory'].nil? %>
-      <%  dir.each { |directory| @wraith_dir = directory.gsub('public/', '') } %>
-      <a href="<%= @wraith_dir %>/gallery.html"><%= @wraith_dir.capitalize %> Gallery</a>
+      <% wraith = YAML::load(File.open(configs)) %>
+      <% dir = wraith['directory'] unless wraith['directory'].nil? %>
+      <% dir.each { |directory| @wraith_dir = directory.gsub('public/', '') } %>
+      <% time = File.stat('public/' + @wraith_dir + '/gallery.html').ctime %>
+      <a href="<%= @wraith_dir %>/gallery.html"><h1><%= @wraith_dir.capitalize %> Gallery</h1></a>
+      <h2>Last run at <%= time %></h2>
     <% end %>
-
-    <script src="/assets/js/bootstrap.min.js"></script>
-  </body>
-</html>

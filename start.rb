@@ -8,8 +8,5 @@ get '/' do
 end
 
 get '/run' do
-  def initialize
-    wraith = Wraith::CLI.new
-    wraith.capture('config')
-  end
+  erb :wraith
 end
