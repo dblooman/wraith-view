@@ -2,7 +2,9 @@
       <% wraith = YAML::load(File.open(configs)) %>
       <% dir = wraith['directory'] unless wraith['directory'].nil? %>
       <% dir.each { |directory| @wraith_dir = directory.gsub('public/', '') } %>
-      <% time = File.stat('public/' + @wraith_dir + '/gallery.html').ctime %>
+      <% gallery = @wraith_dir + '/gallery.html' %>
+      <% time_file = "public/#{gallery}" unless !File.exist?(gallery) %>
+      <% time = File.stat(time_file).ctime unless time_file.nil? %>
       <a href="<%= @wraith_dir %>/gallery.html"><h1><%= @wraith_dir.capitalize %> Gallery</h1></a>
       <h2>Last run at <%= time %></h2>
     <% end %>
