@@ -8,7 +8,7 @@ snap_file: "javascript/snap.js"
 
 # Type the name of the directory that shots will be stored in
 directory:
-  - 'shots'
+  - 'news'
 
 # Add only 2 domains, key will act as a label
 domains:
