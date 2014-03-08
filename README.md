@@ -18,7 +18,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Use CLI for start and stop commands.  Wraithview will start a Sinatra app using Thin on port 3000.
+
+```
+wraithview start           # Starts Wraith view service
+wraithview stop            # Stops Wraith view service
+```
+
+### Options
+
+To use another port, pass it options
+
+`
+wraithview start -p 9000
 
 ## Contributing
 
