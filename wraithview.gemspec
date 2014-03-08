@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'wraith-view/version'
+require 'wraithview/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "wraith-view"
-  spec.version       = Wraith::View::VERSION
+  spec.name          = "wraithview"
+  spec.version       = WraithView::VERSION
   spec.authors       = ["DaveBlooman"]
   spec.email         = ["david.blooman@gmail.com"]
   spec.summary       = "Web viewer to start Wraith tasks"
@@ -27,4 +27,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "rake"
   spec.add_runtime_dependency "thor"
   spec.add_runtime_dependency "sinatra"
+  spec.add_runtime_dependency "thin"
 end

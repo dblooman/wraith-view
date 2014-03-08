@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in wraith-view.gemspec
+# Specify your gem's dependencies in wraithview.gemspec
 gemspec
