@@ -1,13 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'rubygems'
+require 'wraithview'
 
-begin
-  require 'wraithview/cli'
-  WraithView::CLI.start
-rescue Interrupt => e
-  puts "\nQuitting..."
-  exit 1
-rescue SystemExit => e
-  exit e.status
-end
+WraithView::CLI.start
