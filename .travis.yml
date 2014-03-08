@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+  - "1.9.2"
+  - "2.0.0"
+
+script: "bundle exec bin/wraith view start"
+after_script: "bundle exec bin/wraith view stop"
+
+notifications:
+  email:
+    recipients:
+      - david.blooman@bbc.co.uk
+    on_failure: change
+    on_success: never
