@@ -1,4 +1,4 @@
-# Wraith::View
+# Wraith View
 
 This will auto generate pages to view Wraith galleries, when they were created and enable a user to run a job.
 
@@ -29,8 +29,7 @@ wraithview stop            # Stops Wraith view service
 
 To use another port, pass it options
 
-`
-wraithview start -p 9000
+`wraithview start -p 9000`
 
 ## Contributing
 
