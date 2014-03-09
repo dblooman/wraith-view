@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'yaml'
-require 'wraith'
 
 class HomeController < ApplicationController
 
