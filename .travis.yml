@@ -3,8 +3,9 @@ rvm:
   - "1.9.2"
   - "2.0.0"
 
-script: "bundle exec bin/wraith view start"
-after_script: "bundle exec bin/wraith view stop"
+
+script: "bundle exec bin/wraithview start"
+after_script: "bundle exec bin/wraithview stop"
 
 notifications:
   email:
