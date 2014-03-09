@@ -2,6 +2,13 @@
 
 This will auto generate pages to view Wraith galleries, when they were created and enable a user to run a job.
 
+Actual use :
+
+`bundle exec shotgun`
+
+Visit : `http://127.0.0.1:9393/`
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
